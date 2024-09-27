@@ -19,13 +19,11 @@
 </head>
 <body>
   <div class="container">
-     <!-- Name setup -->
     <div id="nameSetup" class="game-container">
       <h2>Set Player Name</h2>
       <input type="text" id="playerNameInput" placeholder="Enter your name" class="form-control mb-3" style="max-width: 300px; margin: 0 auto;">
       <button id="setName" class="btn btn-primary">Set Name</button>
     </div>
-    <!-- Game controls setup -->
     <div id="gameControls" class="game-container" style="display: none;">
       <h2>Player: <span id="playerName">Unknown</span></h2>
       <button id="startGame" class="btn btn-success">Start Game</button>
@@ -33,7 +31,6 @@
       <p id="gameOverMessage" class="text-danger"></p>
     </div>
     <div class="game-container">
-      <!-- Canvas setup -->
       <canvas id="gameCanvas" width="400" height="300"></canvas>
     </div>
   </div>
