@@ -11,7 +11,9 @@ let playerName = 'Unknown';
 
 document.getElementById('setName').onclick = function() {
   const playerNameInput = document.getElementById('playerNameInput').value.trim();
-  if (playerNameInput === '') return;
+  if (playerNameInput === '') {
+    return;
+  }
   playerName = playerNameInput;
   document.getElementById('playerName').innerText = playerName;
   document.getElementById('gameControls').style.display = 'block';
@@ -24,7 +26,7 @@ document.getElementById('startGame').onclick = function() {
   obstacles = [];
   gameStartTime = Date.now();
   document.getElementById('score').innerText = score;
-  document.getElementById('gameOverMessage').innerText = ''; 
+  document.getElementById('gameOverMessage').innerText = '';
   startGame();
 };
 
