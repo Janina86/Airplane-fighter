@@ -10,10 +10,12 @@ let gameStartTime;
 let playerName = 'Unknown';
 
 document.getElementById('setName').onclick = function() {
-  const playerNameInput = document.getElementById('playerNameInput').value.trim();
+  let playerNameInput = document.getElementById('playerNameInput').value.trim();
+
   if (playerNameInput === '') {
-    return;
+    playerNameInput = 'Unknown'; 
   }
+
   playerName = playerNameInput;
   document.getElementById('playerName').innerText = playerName;
   document.getElementById('gameControls').style.display = 'block';
@@ -77,7 +79,6 @@ function updateScore() {
 
 function endGame() {
   clearInterval(gameInterval);
-  const finalScore = document.getElementById('score').innerText;
   document.getElementById('gameOverMessage').innerText = "GAME OVER!";
 }
 
